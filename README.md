@@ -4,5 +4,5 @@
 - "/" 登录页面
   - GET, JSON{
     - username
-    - password 
+    - password  
   }  
