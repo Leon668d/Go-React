@@ -24,7 +24,8 @@ func main() {
 	// r.Use(sessions.Sessions("mysession", store))
 
 	// 路由分组
-	// CORS 中间件
+
+	// CORS 中间件,前后端跨域
 	cors := func(c *gin.Context) {
 		// 允许特定的域进行跨域请求
 		c.Writer.Header().Set("Access-Control-Allow-Origin", "http://localhost:3002")

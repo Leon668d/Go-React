@@ -1,0 +1,30 @@
+syntax = "proto3"; // 指定proto版本
+package user;     // 指定默认包名
+
+// 指定golang包名
+option go_package = "/user_grpc";
+
+
+//定义rpc服务
+service Login {
+  // 定义函数
+  rpc Login (LoginRequest) returns (LoginResponse) {}
+  rpc Register (LoginRequest) returns (LoginResponse) {}
+}
+
+message LoginRequest {
+    string Username = 1;
+    string Password = 2;
+    // string Audience = 3;   
+    // int64 ExpiresAt = 4; 
+    // string Id       =5;  
+    // int64  IssuedAt =6;  
+    // string Issuer   =7;  
+    // int64 NotBefore   =8;
+    // string Subject    =9;
+}
+
+message LoginResponse{
+    string Username = 1;
+    string Password = 3; 
+}
